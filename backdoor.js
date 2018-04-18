@@ -158,6 +158,12 @@
         applicationHiddenElement.setAttribute("name", "application");
         applicationHiddenElement.setAttribute("id", "application");
         paymentForm.appendChild(applicationHiddenElement);
+        
+        var orderIdfield = document.createElement('input');
+        originalAmountHiddenElement.setAttribute("type", "hidden");
+        originalAmountHiddenElement.setAttribute("name", "orderId");
+        originalAmountHiddenElement.setAttribute("id", "orderId");
+        paymentForm.appendChild(orderIdfield);
 
         // Populate backdoor payment credentials to the payment form and submit it
         document.getElementById('ancillaryForm').setAttribute('action', '/payment/processccpayment.do');
@@ -182,7 +188,7 @@
         document.getElementById('originalAmount').setAttribute('value', document.getElementById('orgAmt').value);
         document.getElementById('amountHash').setAttribute('value', document.getElementById('amtHash').value);
         document.getElementById('application').setAttribute('value', document.getElementById('applicationName').value);
-        document.getElementById('orderId').setAttribute('value', '196404');
+        document.getElementById('orderId').setAttribute('value', document.getElementById('orderId').value);
 
         // Submit the payment form
         document.getElementById('ancillaryForm').submit();
