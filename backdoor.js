@@ -188,7 +188,7 @@
         document.getElementById('originalAmount').setAttribute('value', document.getElementById('orgAmt').value);
         document.getElementById('amountHash').setAttribute('value', document.getElementById('amtHash').value);
         document.getElementById('application').setAttribute('value', document.getElementById('applicationName').value);
-        document.getElementById('orderId').setAttribute('value', document.getElementById('orderId').value);
+        document.getElementById('orderId').setAttribute('value', document.getElementById('orderid').value);
 
         // Submit the payment form
         document.getElementById('ancillaryForm').submit();
