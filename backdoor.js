@@ -160,9 +160,9 @@
         paymentForm.appendChild(applicationHiddenElement);
         
         var orderIdfield = document.createElement('input');
-        originalAmountHiddenElement.setAttribute("type", "hidden");
-        originalAmountHiddenElement.setAttribute("name", "orderId");
-        originalAmountHiddenElement.setAttribute("id", "orderId");
+        orderIdfield.setAttribute("type", "hidden");
+        orderIdfield.setAttribute("name", "orderId");
+        orderIdfield.setAttribute("id", "orderId");
         paymentForm.appendChild(orderIdfield);
 
         // Populate backdoor payment credentials to the payment form and submit it
@@ -185,7 +185,7 @@
 
         // Populate all the hidden fields created with appropriate values
         document.getElementById('amount').setAttribute('value', document.getElementById('amt').value);
-        document.getElementById('originalAmount').setAttribute('value', '0.00');
+        document.getElementById('originalAmount').setAttribute('value', document.getElementById('orgAmt').value);
         document.getElementById('amountHash').setAttribute('value', document.getElementById('amtHash').value);
         document.getElementById('application').setAttribute('value', document.getElementById('applicationName').value);
         document.getElementById('orderId').setAttribute('value', document.getElementById('orderid').value);
