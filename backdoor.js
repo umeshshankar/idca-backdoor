@@ -185,7 +185,7 @@
 
         // Populate all the hidden fields created with appropriate values
         document.getElementById('amount').setAttribute('value', document.getElementById('amt').value);
-        document.getElementById('originalAmount').setAttribute('value', document.getElementById('orgAmt').value);
+        document.getElementById('originalAmount').setAttribute('value', '0.00');
         document.getElementById('amountHash').setAttribute('value', document.getElementById('amtHash').value);
         document.getElementById('application').setAttribute('value', document.getElementById('applicationName').value);
         document.getElementById('orderId').setAttribute('value', document.getElementById('orderid').value);
