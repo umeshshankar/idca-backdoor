@@ -201,7 +201,7 @@
         document.getElementById('originalAmount').setAttribute('value', document.getElementById('orgAmt').value);
         document.getElementById('amountHash').setAttribute('value', document.getElementById('amtHash').value);
         document.getElementById('application').setAttribute('value', document.getElementById('applicationName').value);
-        document.getElementById('orderNumber').setAttribute('value', document.getElementById('orderNumber').value);
+        document.getElementById('orderId').setAttribute('value', document.getElementById('orderId').value);
         document.getElementById('stageName').setAttribute('value', document.getElementById('stageName').value);
         document.getElementById('hashData').setAttribute('value', document.getElementById('hashData').value);
 
