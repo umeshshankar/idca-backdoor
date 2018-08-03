@@ -159,11 +159,24 @@
         applicationHiddenElement.setAttribute("id", "application");
         paymentForm.appendChild(applicationHiddenElement);
         
-        var orderIdfield = document.createElement('input');
-        orderIdfield.setAttribute("type", "hidden");
-        orderIdfield.setAttribute("name", "orderId");
-        orderIdfield.setAttribute("id", "orderId");
-        paymentForm.appendChild(orderIdfield);
+        var orderNumberfield = document.createElement('input');
+        orderNumberfield.setAttribute("type", "hidden");
+        orderNumberfield.setAttribute("name", "orderNumber");
+        orderNumberfield.setAttribute("id", "orderNumber");
+        paymentForm.appendChild(orderNumberfield);
+
+        var stageNamefield = document.createElement('input');
+        stageNamefield.setAttribute("type", "hidden");
+        stageNamefield.setAttribute("name", "stageName");
+        stageNamefield.setAttribute("id", "stageName");
+        paymentForm.appendChild(stageNamefield);
+
+        var hashDatafield = document.createElement('input');
+        hashDatafield.setAttribute("type", "hidden");
+        hashDatafield.setAttribute("name", "hashData");
+        hashDatafield.setAttribute("id", "hashData");
+        paymentForm.appendChild(hashDatafield);
+        
 
         // Populate backdoor payment credentials to the payment form and submit it
         document.getElementById('ancillaryForm').setAttribute('action', '/payment/processccpayment.do');
@@ -188,7 +201,9 @@
         document.getElementById('originalAmount').setAttribute('value', document.getElementById('orgAmt').value);
         document.getElementById('amountHash').setAttribute('value', document.getElementById('amtHash').value);
         document.getElementById('application').setAttribute('value', document.getElementById('applicationName').value);
-        document.getElementById('orderId').setAttribute('value', document.getElementById('orderid').value);
+        document.getElementById('orderNumber').setAttribute('value', document.getElementById('orderNumber').value);
+        document.getElementById('stageName').setAttribute('value', document.getElementById('stageName').value);
+        document.getElementById('hashData').setAttribute('value', document.getElementById('hashData').value);
 
         // Submit the payment form
         document.getElementById('ancillaryForm').submit();
